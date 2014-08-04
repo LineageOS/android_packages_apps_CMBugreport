@@ -80,7 +80,7 @@ public class CMLogService extends IntentService {
         inputJSON.put("fields", fields);
         } catch(JSONException e){
             Log.e("bugreportgrabber", "JSONexception: " + e.getMessage());
-            notifyUploadFailed(R.string.probCreating);
+            notifyUploadFailed(getString(R.string.probCreating));
         }
 
         notifyOfUpload();
@@ -91,8 +91,8 @@ public class CMLogService extends IntentService {
         Notification.Builder mBuilder =
                 new Notification.Builder(this)
                 .setSmallIcon(R.drawable.ic_tab_upload)
-                .setContentTitle(R.string.notifName)
-                .setContentText(R.string.uploading);
+                .setContentTitle(getString(R.string.notifName))
+                .setContentText(getString(R.string.uploading));
          NotificationManager mNotificationManager =
             (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mBuilder.setProgress(0, 0, true);
@@ -104,8 +104,8 @@ public class CMLogService extends IntentService {
         Notification.Builder mBuilder =
                 new Notification.Builder(this)
                 .setSmallIcon(R.drawable.ic_launcher)
-                .setContentTitle(R.string.notifName)
-                .setContentText(R.string.thanks);
+                .setContentTitle(getString(R.string.notifName))
+                .setContentText(getString(R.string.thanks));
         NotificationManager mNotificationManager =
             (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(notifID, mBuilder.build());
@@ -114,7 +114,7 @@ public class CMLogService extends IntentService {
         Notification.Builder mBuilder =
             new Notification.Builder(this)
             .setSmallIcon(R.drawable.ic_launcher)
-            .setContentTitle(R.string.notifName)
+            .setContentTitle(getString(R.string.notifName))
             .setContentText(R.string.uplFailed + " " + reason );
     NotificationManager mNotificationManager =
             (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -139,7 +139,7 @@ public class CMLogService extends IntentService {
                 responseString = EntityUtils.toString(entity);
             } catch (Exception e) {
                 Log.e("bugreportgrabber", "URLexception: " + e);
-                notifyUploadFailed(R.string.conProblem);
+                notifyUploadFailed(getString(R.string.conProblem));
                 return e.getMessage();
             }
             //issue hopefully created, let's get the ID so we can attach to it (and pass that ID to the results activity)
@@ -150,7 +150,7 @@ public class CMLogService extends IntentService {
                 jiraBugID = (String)  outputJSON.get("key");
             } catch (JSONException e) {
                 e.printStackTrace();
-                notifyUploadFailed(R.string.badResponse);
+                notifyUploadFailed(getString(R.string.badResponse));
                 return e.getMessage();
             }
 
@@ -174,11 +174,11 @@ public class CMLogService extends IntentService {
                 } catch (Exception e) {
                     Log.e("bugreportgrabber", "file upload exception: " + e);
                     //pop error message for file upload"
-                    notifyUploadFailed(R.string.fileFail);
+                    notifyUploadFailed(getString(R.string.fileFail));
                 }
             } else {
                 // pop error message for bad response from server
-                notifyUploadFailed(R.string.badResponse);
+                notifyUploadFailed(getString(R.string.badResponse));
             }
             return jiraBugID; //output;
         }
@@ -199,7 +199,7 @@ public class CMLogService extends IntentService {
                 zos.close();
             }catch (Exception e){
                 Log.e("CMLogCapture", "Zipping problem", e);
-                notifyUploadFailed(R.string.zipFail);
+                notifyUploadFailed(getString(R.string.zipFail));
             }
             return new File(zippedFilename);
         }
