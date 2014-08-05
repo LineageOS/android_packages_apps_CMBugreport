@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9a061dce_8787b20e",
+        "filename": "AndroidManifest.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2014-08-05T14:33:25Z",
+      "side": 1,
+      "message": "http://review.cyanogenmod.org/#/c/69799/3/AndroidManifest.xml",
+      "parentUuid": "9a061dce_07ef22e9",
+      "revId": "38050f962f80abec01d3b7dc5309aeb2138f91c1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a061dce_27f226d3",
         "filename": "AndroidManifest.xml",
         "patchSetId": 1
