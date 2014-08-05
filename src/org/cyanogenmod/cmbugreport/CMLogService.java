@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2014 The CyanogenMod Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package org.cyanogenmod.cmbugreport;
 
 import java.io.File;
@@ -28,13 +44,11 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.util.Log;
 
-
 public class CMLogService extends IntentService {
-
     private final static String projectName = "11400"; // 11102 = WIKI 11400 = bugdump
     private final static String issueType = "1"; // 4 = improvement   1 = bug?
     String bugID = "";
-    private final static String uNpW =     "QnVnQ29sbGVjdG9yOldlTE9WRWJ1Z3Mh"; // <--- BugCollector
+    private final static String uNpW = "QnVnQ29sbGVjdG9yOldlTE9WRWJ1Z3Mh"; // <--- BugCollector
     private final static String apiURL = "https://jira.cyanogenmod.org/rest/api/2/issue/";
 
     public final static String EXTRA_MESSAGE = "org.cyanogenmod.bugreportgrabber.MESSAGE";
@@ -56,12 +70,11 @@ public class CMLogService extends IntentService {
         ArrayList<Uri> attachments = new ArrayList<Uri>();
         attachments = intent.getParcelableArrayListExtra(Intent.EXTRA_STREAM);
 
-        for (Uri u : attachments){
-            if ( u.toString().contains("txt")){
+        for (Uri u : attachments) {
+            if (u.toString().contains("txt")) {
                 reportURI = u;
             }
         }
-
 
         String summary = intent.getStringExtra(Intent.EXTRA_SUBJECT);
         String description = intent.getStringExtra(Intent.EXTRA_TEXT);
@@ -71,14 +84,14 @@ public class CMLogService extends IntentService {
         JSONObject issuetype = new JSONObject();
 
         try {
-        project.put("id", projectName);
-        issuetype.put("id", issueType);
-        fields.put("project",project);
-        fields.put("summary", summary);
-        fields.put("description", description);
-        fields.put("issuetype", issuetype);
-        inputJSON.put("fields", fields);
-        } catch(JSONException e){
+            project.put("id", projectName);
+            issuetype.put("id", issueType);
+            fields.put("project",project);
+            fields.put("summary", summary);
+            fields.put("description", description);
+            fields.put("issuetype", issuetype);
+            inputJSON.put("fields", fields);
+        } catch(JSONException e) {
             Log.e("bugreportgrabber", "JSONexception: " + e.getMessage());
             notifyUploadFailed(getString(R.string.probCreating));
         }
@@ -93,12 +106,11 @@ public class CMLogService extends IntentService {
                 .setSmallIcon(R.drawable.ic_tab_upload)
                 .setContentTitle(getString(R.string.notifName))
                 .setContentText(getString(R.string.uploading));
-         NotificationManager mNotificationManager =
-            (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mBuilder.setProgress(0, 0, true);
         mNotificationManager.notify(notifID, mBuilder.build());
     }
-
 
     private void notifyUploadFinished(String issueNumber) {
         Notification.Builder mBuilder =
@@ -107,19 +119,21 @@ public class CMLogService extends IntentService {
                 .setContentTitle(getString(R.string.notifName))
                 .setContentText(getString(R.string.thanks));
         NotificationManager mNotificationManager =
-            (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(notifID, mBuilder.build());
     }
+
     private void notifyUploadFailed(String reason) {
         Notification.Builder mBuilder =
-            new Notification.Builder(this)
-            .setSmallIcon(R.drawable.ic_launcher)
-            .setContentTitle(getString(R.string.notifName))
-            .setContentText(R.string.uplFailed + " " + reason );
-    NotificationManager mNotificationManager =
-            (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                new Notification.Builder(this)
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentTitle(getString(R.string.notifName))
+                .setContentText(R.string.uplFailed + " " + reason);
+        NotificationManager mNotificationManager =
+                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(notifID, mBuilder.build());
-        }
+    }
+
     private class CallAPI extends AsyncTask<JSONObject, Void, String> {
         String responseString = "";
         @Override
@@ -128,7 +142,7 @@ public class CMLogService extends IntentService {
                 URI url = new URI(apiURL);
                 DefaultHttpClient htClient = new DefaultHttpClient();
                 HttpPost httpost = new HttpPost(url);
-                //turn the JSONObject being passed into a stringentity for http consumption
+                // Turn the JSONObject being passed into a stringentity for http consumption
                 StringEntity se = new StringEntity(params[0].toString());
                 httpost.setEntity(se);
                 httpost.setHeader("Accept","application/json");
@@ -142,7 +156,9 @@ public class CMLogService extends IntentService {
                 notifyUploadFailed(getString(R.string.conProblem));
                 return e.getMessage();
             }
-            //issue hopefully created, let's get the ID so we can attach to it (and pass that ID to the results activity)
+
+            // Issue hopefully created, let's get the ID so we can attach to it
+            // (and pass that ID to the results activity)
             String jiraResponse = responseString;
             String jiraBugID = "";
             try {
@@ -154,8 +170,8 @@ public class CMLogService extends IntentService {
                 return e.getMessage();
             }
 
-            //now we attach the file
-            if(!jiraBugID.isEmpty()){
+            // Now we attach the file
+            if(!jiraBugID.isEmpty()) {
                 try {
                     URI url2 = new URI(apiURL + jiraBugID + "/attachments");
                     DefaultHttpClient uplClient = new DefaultHttpClient();
@@ -170,43 +186,45 @@ public class CMLogService extends IntentService {
                     HttpResponse uplResponse = uplClient.execute(httpostUpl);
                     HttpEntity entityResponse = uplResponse.getEntity();
                     responseString = EntityUtils.toString(entityResponse);
-                        // Log.d("brg", "response " + responseString);
+                    //Log.d("brg", "response " + responseString);
                 } catch (Exception e) {
                     Log.e("bugreportgrabber", "file upload exception: " + e);
-                    //pop error message for file upload"
+                    // Pop error message for file upload
                     notifyUploadFailed(getString(R.string.fileFail));
                 }
             } else {
-                // pop error message for bad response from server
+                // Pop error message for bad response from server
                 notifyUploadFailed(getString(R.string.badResponse));
             }
-            return jiraBugID; //output;
+            return jiraBugID;
         }
+
         private File zip(File bugreportFile) {
             String zippedFilename = "/data/bugreports/tmp.zip";
-            try{
+            try {
                 byte[] buffer = new byte[1024];
                 FileOutputStream fos = new FileOutputStream(zippedFilename);
                 ZipOutputStream zos = new ZipOutputStream(fos);
                 FileInputStream fis = new FileInputStream(bugreportFile);
                 zos.putNextEntry(new ZipEntry(bugreportFile.getName()));
                 int length;
-                while ((length = fis.read(buffer)) > 0){
+                while ((length = fis.read(buffer)) > 0) {
                     zos.write(buffer, 0, length);
                 }
                 zos.closeEntry();
                 fis.close();
                 zos.close();
-            }catch (Exception e){
+            } catch (Exception e) {
                 Log.e("CMLogCapture", "Zipping problem", e);
                 notifyUploadFailed(getString(R.string.zipFail));
             }
             return new File(zippedFilename);
         }
-        protected void onPostExecute(String result){
-                stopForeground(true);
-                notifyUploadFinished(result);
-                stopSelf();
-            }
-        } // end CallApi
+
+        protected void onPostExecute(String result) {
+            stopForeground(true);
+            notifyUploadFinished(result);
+            stopSelf();
+        }
+    }
 }
