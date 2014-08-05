@@ -16,6 +16,329 @@
       "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_674a5e85",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Imports need reordering.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_a7447674",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Unused -\u003e can be nuked",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_474f5a92",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Constants should be ALL_UPPERCASE.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_c75b6a53",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "m prefix",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_2759865b",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Either make it static final and name it all uppercase or use some R.* constant as identifier.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_07560229",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Intent intent",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_6731be0b",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Should collapse those two lines into one (no need to create a useless object)",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_a73bd6ea",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Can break here.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_47363a04",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "What if none of the attachments contains txt? This will lead to a NPE later...",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_87405258",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "m prefix is only for member variables (here and below)",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_c7224ab9",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Looks like a lot of stuff can be deduplicated here.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_e725cec2",
+        "filename": "src/org/cyanogenmod/cmbugreport/CMLogService.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "http://source.android.com/source/code-style.html#dont-catch-generic-exception",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_077f22ab",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "This should be below the android.* imports: http://source.android.com/source/code-style.html#order-import-statements",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_27822695",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "This is never assigned and can/should be nuked.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_c7740ad1",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "This can be a local variable AFAICT.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_4768faf5",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "This needs an m prefix.",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_e7778ed2",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "Space missing",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_a76d9606",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "if (!TextUtils.isEmpty(summary) \u0026\u0026 !TextUtils.isEmpty(description)) {",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_877212e4",
+        "filename": "src/org/cyanogenmod/cmbugreport/MainActivity.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 121,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-05T20:07:38Z",
+      "side": 1,
+      "message": "This should also work:\n\nreturn new AlertDialog.Builder(getActivity())\n        .setMessage(R.string.noText)\n        .setNegativeButton(R.string.ok, null)\n        .create();",
+      "revId": "6209aab6946a50c06a612da22f97a00c156b0bab",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
