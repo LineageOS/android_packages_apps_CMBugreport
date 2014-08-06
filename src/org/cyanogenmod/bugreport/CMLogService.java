@@ -201,10 +201,12 @@ public class CMLogService extends IntentService {
             post.setEntity(bugreportUploadEntity);
 
             client.execute(post);
+
+            zippedReportFile.delete();
         }
 
         private File zipFile(File bugreportFile) throws ZipException {
-            String zippedFilename = "/data/bugreports/tmp.zip";
+            String zippedFilename = getCacheDir() + "/" + bugreportFile.getName() + ".zip";
             try {
                 byte[] buffer = new byte[1024];
                 FileOutputStream fos = new FileOutputStream(zippedFilename);
