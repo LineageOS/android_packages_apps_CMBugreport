@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a061dce_a258e4fb",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 5574
+      },
+      "writtenOn": "2014-08-06T01:58:11Z",
+      "side": 1,
+      "message": "If this is going to be the app name in \"Settings \u003e Apps\", it should be changed to \"CM Bugreport\".\n\nNot everyone knows what  JIRA is, and it would get even worse if someone will try to interpret this as an acronym:\n\n Acronym\tDefinition\n JIRA\tJapan Industries Association of Radiological Systems (trade organization)\n JIRA\tJapan Industrial Robot Association (est. 1972)\n JIRA\tJapan Investor Relations Association\n JIRA\tJournal of Indian Rheumatology Association (New Delhi, India)\n JIRA\tJohn I. Rivers Associates (Georgia)\n(from http://acronyms.thefreedictionary.com/JIRA)",
+      "revId": "281ad206cf556175df8348a83fbb49c1de2a3de6",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a061dce_c2da3878",
         "filename": "res/values/strings.xml",
         "patchSetId": 5
