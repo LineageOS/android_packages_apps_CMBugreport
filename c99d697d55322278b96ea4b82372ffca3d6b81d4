@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "9a061dce_889e9f54",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-07T18:57:52Z",
+      "side": 1,
+      "message": "Or - instead of the try-catch around the close calls, use libcore.io.IoUtils.closeQuietly()",
+      "parentUuid": "9a061dce_48948736",
+      "revId": "c99d697d55322278b96ea4b82372ffca3d6b81d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9a061dce_688fcb23",
         "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
         "patchSetId": 1
