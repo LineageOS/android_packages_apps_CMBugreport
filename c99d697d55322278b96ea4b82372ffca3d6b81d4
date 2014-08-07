@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a061dce_2877933b",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-07T18:55:12Z",
+      "side": 1,
+      "message": "Optimization:\n\nFile zippedFile \u003d new File(getCacheDir(), bugreportFile.getName() + \".zip\");",
+      "revId": "c99d697d55322278b96ea4b82372ffca3d6b81d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_08744f33",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-07T18:55:12Z",
+      "side": 1,
+      "message": "new FileOutputStream(zippedFile);",
+      "revId": "c99d697d55322278b96ea4b82372ffca3d6b81d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_48948736",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-07T18:55:12Z",
+      "side": 1,
+      "message": "Now that I see it, this should be in a finally block. Shortened example:\n\nFileInputStream fis \u003d null;\nZipOutputStream zos \u003d null;\n\ntry {\n    fis \u003d new FileInputStream(bugreportFile);\n    zos \u003d new ZipOutputStream(new FileOutputStream(zippedFile));\n    [.... write stuff ...]\n} catch (IOException e) {\n    [... error handling ...]\n} finally {\n    if (fis !\u003d null) {\n        try {\n            fis.close();\n        } catch (IOException e) {\n            // ignored\n        }\n    }\n    [ ... same for zos ... ]\n}",
+      "revId": "c99d697d55322278b96ea4b82372ffca3d6b81d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9a061dce_688fcb23",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-08-07T18:55:12Z",
+      "side": 1,
+      "message": "return zippedFile;",
+      "revId": "c99d697d55322278b96ea4b82372ffca3d6b81d4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
