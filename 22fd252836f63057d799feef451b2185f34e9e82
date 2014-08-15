@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_7c76913f",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 6
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2881
+      },
+      "writtenOn": "2014-08-15T07:19:47Z",
+      "side": 1,
+      "message": "This should have said\n\n- Preview crash report\n\nno need for capitals",
+      "revId": "22fd252836f63057d799feef451b2185f34e9e82",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
