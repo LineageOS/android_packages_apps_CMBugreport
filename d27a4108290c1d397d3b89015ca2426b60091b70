@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_3fdd2b71",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-08-16T04:26:37Z",
+      "side": 1,
+      "message": "\u003cstring name\u003d\"notif_processing\"\u003eProcessing bug report\\u2026\u003c/string\u003e",
+      "revId": "d27a4108290c1d397d3b89015ca2426b60091b70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_1fdaef78",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-08-16T04:26:37Z",
+      "side": 1,
+      "message": "Please wrap to 100 chars",
+      "revId": "d27a4108290c1d397d3b89015ca2426b60091b70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_7fe7a340",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 4884
+      },
+      "writtenOn": "2014-08-16T04:26:37Z",
+      "side": 1,
+      "message": "Please wrap to 100 chars",
+      "revId": "d27a4108290c1d397d3b89015ca2426b60091b70",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
