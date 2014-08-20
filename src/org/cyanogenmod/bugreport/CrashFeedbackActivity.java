@@ -140,8 +140,7 @@ public class CrashFeedbackActivity extends Activity {
         if (mReport == null) {
             return "";
         }
-        String cmVersion = SystemProperties.get(RO_CM_VERSION, "");
-        return RO_CM_VERSION + ": " + cmVersion + "\n\n" + mReport.crashInfo.stackTrace;
+        return mReport.crashInfo.stackTrace;
     }
 
     private void uploadCrashReport() {

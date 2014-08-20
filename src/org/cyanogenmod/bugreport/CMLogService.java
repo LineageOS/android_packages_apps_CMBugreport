@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.PowerManager;
+import android.os.SystemProperties;
 import android.util.Log;
 
 import org.apache.http.HttpEntity;
@@ -55,6 +56,7 @@ public class CMLogService extends IntentService {
     private final static String AUTH = "QnVnQ29sbGVjdG9yOldlTE9WRWJ1Z3Mh"; // <--- BugCollector
     private final static String API_URL = "https://jira.cyanogenmod.org/rest/api/2/issue/";
     private final static String SCRUBBED_BUG_REPORT_PREFIX = "scrubbed_";
+    public static final String RO_CM_VERSION = "ro.cm.version";
 
     public CMLogService() {
         super("CMLogService");
@@ -90,6 +92,7 @@ public class CMLogService extends IntentService {
             fields.put("summary", summary);
             fields.put("description", description);
             fields.put("issuetype", issuetype);
+            fields.put("customfield_10800", SystemProperties.get(RO_CM_VERSION, ""));
             if (summary.startsWith("[CRASH] ")){
                 labels.put("crash");
             }else{
