@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_b3784f91",
+        "filename": "src/org/cyanogenmod/bugreport/PackageChangeReceiver.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6883
+      },
+      "writtenOn": "2014-08-21T09:24:56Z",
+      "side": 1,
+      "message": "There\u0027s a typo. Should be PACKAGE.",
+      "revId": "2502b996a803cbcc559c8c9f6aef21dbc89a8fc2",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
