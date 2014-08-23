@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_316d5705",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 9045
+      },
+      "writtenOn": "2014-08-23T08:21:40Z",
+      "side": 1,
+      "message": "tiny nitpick: SystemProperties.get(SYSTEMLIB) can be its own variable, no need to call it twice",
+      "revId": "c7804c20d751f347ec4d4740bfb8682f7948e65f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
