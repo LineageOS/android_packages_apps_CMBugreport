@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_780f792e",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2014-09-27T09:55:54Z",
+      "side": 1,
+      "message": "Remove the extra quotes at the end",
+      "revId": "6e63b65c45da82658ec23660080b002f8a436e89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
