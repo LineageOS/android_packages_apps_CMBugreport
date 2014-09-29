@@ -18,25 +18,21 @@ package org.cyanogenmod.bugreport;
 import android.app.Activity;
 import android.app.ApplicationErrorReport;
 import android.content.BroadcastReceiver;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemProperties;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 
 public class CrashFeedbackActivity extends Activity {
 
@@ -46,6 +42,11 @@ public class CrashFeedbackActivity extends Activity {
     public static final String LAST_SUBMISSION = "last_submission";
     public static final String RO_CM_VERSION = "ro.cm.version";
     public static final String CRASH_PREFIX = "[CRASH] ";
+    public static final String CRASH_CLIPBOARD_LABEL = "Crash Report";
+    public static final String CRASH_CLIPBOARD_TOAST_MESSAGE_SUCCESS =
+                                             "Crash report copied to clipboard!";
+    public static final String CRASH_CLIPBOARD_TOAST_MESSAGE_FAILURE =
+                                             "Crash report failed to copy to clipboard.";
 
     ApplicationErrorReport mReport;
     Button mCancelButton, mSubmitButton;
@@ -59,6 +60,20 @@ public class CrashFeedbackActivity extends Activity {
         public void onReceive(Context context, Intent intent) {
             onNetworkAvailabilityChange();
         }
+    };
+
+    private View.OnLongClickListener mContextTextOnLongClickListener =
+            new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    boolean success = copyToClipboard(getContent());
+                    String message = success ? CRASH_CLIPBOARD_TOAST_MESSAGE_SUCCESS :
+                                               CRASH_CLIPBOARD_TOAST_MESSAGE_FAILURE;
+                    Toast.makeText(CrashFeedbackActivity.this,
+                                   message,
+                                   Toast.LENGTH_SHORT).show();
+                    return true;
+                }
     };
 
     private void onNetworkAvailabilityChange() {
@@ -82,6 +97,7 @@ public class CrashFeedbackActivity extends Activity {
         mSubmitButton = (Button) findViewById(R.id.submit);
         mSubjectText = (TextView) findViewById(R.id.subject);
         mContentText = (TextView) findViewById(R.id.content);
+        mContentText.setOnLongClickListener(mContextTextOnLongClickListener);
         mNetworkUnavailableView = (ViewGroup) findViewById(R.id.no_network_warning);
 
         mCancelButton.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +143,22 @@ public class CrashFeedbackActivity extends Activity {
         mReport = intent.getParcelableExtra(Intent.EXTRA_BUG_REPORT);
         mSubjectText.setText(getSubjectLine());
         mContentText.setText(getContent());
+    }
+
+    /**
+     * Copy the given String to the clipboard.
+     * @param stringToCopy The string to copy to the clipboard
+     * @return True if successful, false otherwise
+     */
+    private boolean copyToClipboard(String stringToCopy) {
+        ClipboardManager clipBoard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        if (clipBoard != null && !TextUtils.isEmpty(stringToCopy)) {
+            ClipData clipData = ClipData.newPlainText(CRASH_CLIPBOARD_LABEL,
+                                                      stringToCopy);
+            clipBoard.setPrimaryClip(clipData);
+            return true;
+        }
+        return false;
     }
 
     private String getSubjectLine() {
