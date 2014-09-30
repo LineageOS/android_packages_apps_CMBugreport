@@ -16,6 +16,24 @@
       "revId": "5bde09497cfae587e13c5bf4e7272fb1c9650768",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_4539f140",
+        "filename": "src/org/cyanogenmod/bugreport/CrashFeedbackActivity.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 9621
+      },
+      "writtenOn": "2014-09-30T07:13:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a1b2928_e5e8fd12",
+      "revId": "5bde09497cfae587e13c5bf4e7272fb1c9650768",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
     }
   ]
 }
