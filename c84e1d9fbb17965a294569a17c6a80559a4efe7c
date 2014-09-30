@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_c519817b",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": "} else (...) {",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_252795b7",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": "- Boolean -\u003e boolean\n- define the extra name as a constant, also used from the calling code\n- 100 chars (probably fixed when doing the constant thing\n\nI\u0027d also shorten it:\n\nif (!intent.getBooleanExtra(EXTRA_ADD_SCREENSHOT, false)) {\n    sshotUri \u003d null;\n}",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_052a597e",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": ", sshotUri",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_65218d9f",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": "100 chars",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_452451ae",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": ", sshotFile",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_a53ba5d0",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": "} else {",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_853669e5",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-09-30T01:07:51Z",
+      "side": 1,
+      "message": "No need for copying this. Just make the signature of the method look like this:\n\nprivate File zipFiles(File... files) throws ZipException\n\nand then iterate over the array, using the first item to determine the zip filename.",
+      "revId": "c84e1d9fbb17965a294569a17c6a80559a4efe7c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
