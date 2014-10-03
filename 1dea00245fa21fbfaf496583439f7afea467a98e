@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_143569f6",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2014-10-03T21:38:15Z",
+      "side": 1,
+      "message": "While probably this doesn\u0027t suppose a real bug, 0 doesn\u0027t means that the buffer is closed (enf of file reached). The correct should be !\u003d -1.\n\nread method returns \"the next byte of data, or -1 if the end of the file is reached.\"",
+      "revId": "1dea00245fa21fbfaf496583439f7afea467a98e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
