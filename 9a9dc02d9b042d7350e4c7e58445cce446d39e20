@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_b46915c1",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-10-03T07:28:45Z",
+      "side": 1,
+      "message": "if (\n\nAlso you forgot the string constant definition ;)",
+      "revId": "9a9dc02d9b042d7350e4c7e58445cce446d39e20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_9464d9e5",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-10-03T07:28:45Z",
+      "side": 1,
+      "message": "Indent by 8.",
+      "revId": "9a9dc02d9b042d7350e4c7e58445cce446d39e20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_f4638dda",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-10-03T07:28:45Z",
+      "side": 1,
+      "message": "if () {",
+      "revId": "9a9dc02d9b042d7350e4c7e58445cce446d39e20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_d45e5111",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-10-03T07:28:45Z",
+      "side": 1,
+      "message": "Given bugreportFile is only used once, can probably squash this into one line.",
+      "revId": "9a9dc02d9b042d7350e4c7e58445cce446d39e20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a1b2928_349ce5bf",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 7
+      },
+      "lineNbr": 366,
+      "author": {
+        "id": 1063
+      },
+      "writtenOn": "2014-10-03T07:28:45Z",
+      "side": 1,
+      "message": "Need to close fis here in the loop, not below.",
+      "revId": "9a9dc02d9b042d7350e4c7e58445cce446d39e20",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
