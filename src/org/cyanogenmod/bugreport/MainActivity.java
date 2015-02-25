@@ -79,7 +79,10 @@ public class MainActivity extends Activity {
                 ? getString(R.string.error_no_text) : null);
 
         CheckBox ssCheck = (CheckBox) findViewById(R.id.ssCheckBox);
+        CheckBox dumpCheck = (CheckBox) findViewById(R.id.dumpCheckBox);
+
         boolean ssPreference = ssCheck.isChecked();
+        boolean dumpPreference = dumpCheck.isChecked();
 
         if (descriptionEditText.getError() != null || summaryEditText.getError() != null) {
             return;
@@ -89,7 +92,8 @@ public class MainActivity extends Activity {
         intent.putExtra(Intent.EXTRA_SUBJECT, summary);
         intent.putExtra(Intent.EXTRA_TEXT, description);
         intent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, mAttachments);
-        intent.putExtra("org.cyanogenmod.bugreport.AddScreenshot", ssPreference);
+        intent.putExtra(CrashConstants.SCREEN_SHOT_ATTACHMENT_PREF, ssPreference);
+        intent.putExtra(CrashConstants.BUG_REPORT_ATTACHMENT_PREF, dumpPreference);
         startService(intent);
 
         // Make the screen go away

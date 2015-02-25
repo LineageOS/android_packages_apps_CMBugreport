@@ -90,8 +90,11 @@ public class CMLogService extends IntentService {
         String description = intent.getStringExtra(Intent.EXTRA_TEXT);
         String kernelver = getFormattedKernelVersion();
         String syslib = SystemProperties.get(SYSTEMLIB);
-        if(!intent.getBooleanExtra("org.cyanogenmod.bugreport.AddScreenshot", false)) {
+        if(!intent.getBooleanExtra(CrashConstants.SCREEN_SHOT_ATTACHMENT_PREF, false)) {
             sshotUri = null;
+        }
+        if (!intent.getBooleanExtra(CrashConstants.BUG_REPORT_ATTACHMENT_PREF, false)) {
+            reportUri = null;
         }
 
         JSONObject fields = new JSONObject();
