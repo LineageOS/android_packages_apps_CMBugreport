@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bacf61ea_6aeea523",
+        "filename": "res/values/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2015-02-25T15:43:09Z",
+      "side": 1,
+      "message": "Not sure if \u0027dump\u0027 is needed here",
+      "revId": "05bce1b03e79effe99a5eb8a4c5dd6127d79efec",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
