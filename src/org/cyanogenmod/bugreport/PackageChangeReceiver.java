@@ -16,6 +16,9 @@
 package org.cyanogenmod.bugreport;
 
 import android.app.Activity;
+import android.app.CustomTile;
+import android.app.PendingIntent;
+import android.app.StatusBarManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -25,6 +28,8 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.SystemProperties;
 import android.util.Log;
+
+import org.cyanogenmod.bugreport.R;
 
 public class PackageChangeReceiver extends BroadcastReceiver {
 
@@ -44,6 +49,9 @@ public class PackageChangeReceiver extends BroadcastReceiver {
         PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(crashActivity, newState, 0);
         pm.setComponentEnabledSetting(bugActivity, newState, 0);
+        if (newState != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+            createTile(context);
+        }
     }
 
     public static boolean isPackageInstalled(Context context, String pkg) {
@@ -60,6 +68,23 @@ public class PackageChangeReceiver extends BroadcastReceiver {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    private void createTile(Context context) {
+        Intent intent1 = new Intent(context, MainActivity.class);
+        intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent1, 0);
+        CustomTile customTile = new CustomTile.Builder(context)
+                .setIcon(R.drawable.ic_launcher)
+                .setLabel(R.string.qs_tile_title)
+                .setContentDescription(R.string.qs_tile_description)
+                .setOnClickIntent(pendingIntent)
+                .setVisibility(true)
+                .build();
+        StatusBarManager statusBarManager
+                = (StatusBarManager) context.getSystemService(Context.STATUS_BAR_SERVICE);
+        statusBarManager.publishTile(123, customTile);
     }
 
 }
