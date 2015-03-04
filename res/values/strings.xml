@@ -30,6 +30,10 @@
     <string name="notif_uploading">Creating issue and uploading report\u2026</string>
     <string name="notif_thanks">Thank you for your submission</string>
 
+    <!-- Quick Setting Tile -->
+    <string name="qs_tile_title">@string/notif_title</string>
+    <string name="qs_tile_description">Create a bug report</string>
+
     <!-- Error messages -->
     <string name="error_no_text">This field must not be empty</string>
 
