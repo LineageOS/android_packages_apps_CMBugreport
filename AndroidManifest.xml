@@ -43,7 +43,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CrashFeedbackActivity"
-                  android:theme="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth">
+                  android:theme="@android:style/Theme.Holo.Dialog.NoActionBar.MinWidth"
+                  android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.APP_ERROR"/>
                 <category android:name="android.intent.category.DEFAULT"/>
