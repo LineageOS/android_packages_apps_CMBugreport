@@ -19,14 +19,14 @@
   <string name="app_name">ڕاپۆرتی هه‌ڵه‌ی CM</string>
   <string name="summary">پوخته‌ی ئه‌م ڕاپۆرته‌ بنووسه‌</string>
   <string name="description">ڕوونکارییه‌ک بنووسه‌، چیت کردووه‌، چی به‌رنامه‌یه‌ک کاری کردووه‌، هتد.</string>
-  <string name="screenshot">ناردنی وێنەیشاشەکە کە گیراوە لەگەڵ ڕاپۆرتی تێکچو?</string>
+  <string name="screenshot">ناردنی وێنەیڕونماکە کە گیراوە لەگەڵ ڕاپۆرتی تێکچو?</string>
   <string name="action_submit">ناردن</string>
   <string name="notif_title">ڕاگه‌یاندنی هه‌ڵه‌</string>
-  <string name="notif_processing">پرۆسه‌ی ڕاپۆرتی هه‌ڵه‌\u2026</string>
-  <string name="notif_uploading">ڕاپۆرتکردنی هه‌ڵه‌ و ناردنی ڕاپۆرت\u2026</string>
+  <string name="notif_processing">پرۆسه‌ی ڕاپۆرتی هه‌ڵه‌\u٢٠٢٦</string>
+  <string name="notif_uploading">ڕاپۆرتکردنی هه‌ڵه‌ و ناردنی ڕاپۆرت\u٢٠٢٦</string>
   <string name="notif_thanks">سوپاس بۆ ناردنه‌که‌ت</string>
   <string name="error_no_text">ناکرێ ئه‌م خانه‌یه‌ به‌تاڵ بێت</string>
-  <string name="error_upload_failed">ناردن سه‌رکه‌وتوو نه‌بوو: <xliff:g id="reason">%1$s</xliff:g></string>
+  <string name="error_upload_failed">ناردن سه‌رکه‌وتوو نه‌بوو: <xliff:g id="reason">%١$s</xliff:g></string>
   <string name="error_problem_creating">کێشه‌ له‌ کاتی ڕاپۆرتکردن</string>
   <string name="error_connection_problem">کێشه‌ له‌ کاتی په‌یوه‌ندی کردن به‌ ڕاژه‌وه‌</string>
   <string name="error_bad_response">ڕاژه‌که‌ هه‌ڵه‌ی هه‌یه‌</string>
