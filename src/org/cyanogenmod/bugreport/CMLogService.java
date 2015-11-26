@@ -61,9 +61,6 @@ public class CMLogService extends IntentService {
     private static final String FILENAME_PROC_VERSION = "/proc/version";
 
     public static final String RO_CM_VERSION = "ro.cm.version";
-    public static final String SYSTEMLIB = "persist.sys.dalvik.vm.lib";
-    public static final String DALVIKLIB = "libdvm.so";
-    public static final String ARTLIB = "libart.so";
     public static final String BUILD_ID_FIELD = "customfield_10800";
     public static final String KERNELVER_FIELD = "customfield_10104";
 
@@ -119,11 +116,6 @@ public class CMLogService extends IntentService {
                 labels.put("crash");
             } else {
                 labels.put("user");
-            }
-            if (ARTLIB.equals(syslib)){
-                labels.put("ART");
-            } else if (DALVIKLIB.equals(syslib)){
-                labels.put("Dalvik");
             }
             if (!isCMKernel){
                 labels.put("non-CM-kernel");
@@ -210,7 +202,7 @@ public class CMLogService extends IntentService {
             "(?:.*?)?" +              /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
             "((Sun|Mon|Tue|Wed|Thu|Fri|Sat).+)"; /* group 4: "Thu Jun 28 11:02:39 PDT 2012" */
 
-        String builder_regex = "build\\d\\d\\@cyanogenmod";
+        String builder_regex = "\\@cyanogenmod";
 
         Matcher m = Pattern.compile(PROC_VERSION_REGEX).matcher(rawKernelVersion);
         if (!m.matches()) {
