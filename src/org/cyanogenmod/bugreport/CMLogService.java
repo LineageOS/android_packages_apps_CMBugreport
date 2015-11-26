@@ -422,7 +422,7 @@ public class CMLogService extends IntentService {
             while ((count = zis.read(buffer)) != -1) {
                 unZipped.write(buffer, 0, count);
             }
-            zis.closeEntry();            
+            zis.closeEntry();
             fileUri = Uri.parse(fullFileName);
         } catch (Exception e) {
             Log.e(TAG, " failed to unzip ", e);
