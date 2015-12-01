@@ -61,6 +61,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
+import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
 public class CMLogService extends IntentService {
@@ -94,7 +95,9 @@ public class CMLogService extends IntentService {
                     reportUri = uri;
                 } else if (uri.toString().endsWith("png")) {
                     sshotUri = uri;
-                }
+                } else if (uri.toString().endsWith("zip")) {
+                    reportUri = zipUri(uri);
+               }
             }
         }
 
@@ -125,11 +128,6 @@ public class CMLogService extends IntentService {
                 labels.put("crash");
             } else {
                 labels.put("user");
-            }
-            if (ARTLIB.equals(syslib)){
-                labels.put("ART");
-            } else if (DALVIKLIB.equals(syslib)){
-                labels.put("Dalvik");
             }
             if (!isCMKernel){
                 labels.put("non-CM-kernel");
@@ -216,7 +214,7 @@ public class CMLogService extends IntentService {
             "(?:.*?)?" +              /* ignore: optional SMP, PREEMPT, and any CONFIG_FLAGS */
             "((Sun|Mon|Tue|Wed|Thu|Fri|Sat).+)"; /* group 4: "Thu Jun 28 11:02:39 PDT 2012" */
 
-        String builder_regex = "build\\d\\d\\@cyanogenmod";
+        String builder_regex = "\\@cyanogenmod";
 
         Matcher m = Pattern.compile(PROC_VERSION_REGEX).matcher(rawKernelVersion);
         if (!m.matches()) {
@@ -353,7 +351,7 @@ public class CMLogService extends IntentService {
         post.setHeader("Authorization","Basic " + getString(R.string.config_auth));
         post.setHeader("X-Atlassian-Token","nocheck");
         try {
-            File bugreportFile = new File("/data" + reportUri.getPath());
+            File bugreportFile = new File(reportUri.getPath());
             File scrubbedBugReportFile = getFileStreamPath(SCRUBBED_BUG_REPORT_PREFIX
                     + bugreportFile.getName());
             ScrubberUtils.scrubFile(CMLogService.this, bugreportFile, scrubbedBugReportFile);
@@ -411,5 +409,42 @@ public class CMLogService extends IntentService {
                 }
         }
         return zippedFile;
+    }
+      private Uri zipUri(Uri zipUri){
+        Uri fileUri = null;
+        File zipFile = null;
+        FileInputStream is = null;
+        ZipInputStream zis = null;
+        FileOutputStream unZipped = null;
+        try {
+            zipFile = new File("/data" + zipUri.getPath());
+            is = new FileInputStream(zipFile);
+            zis = new ZipInputStream(new BufferedInputStream(is));
+            ZipEntry ze = zis.getNextEntry();
+            byte[] buffer = new byte[1024];
+            String filename = ze.getName();
+            String fullFileName = getCacheDir() + "/" + filename;
+            unZipped = new FileOutputStream(fullFileName);
+            int count = 0;
+            while ((count = zis.read(buffer)) != -1) {
+                unZipped.write(buffer, 0, count);
+            }
+            zis.closeEntry();
+            fileUri = Uri.parse(fullFileName);
+        } catch (Exception e) {
+            Log.e(TAG, " failed to unzip ", e);
+        } finally {
+            try {
+                if (zis != null){
+                    zis.close();
+                }
+                if (unZipped != null) {
+                        unZipped.close();
+                }
+             }catch (Exception e) {
+                Log.e(TAG, "can't even close things right", e);
+            }
+        }
+        return fileUri;
     }
 }
