@@ -69,8 +69,12 @@ public class UploadHelper {
         if (f == null || !f.exists()) {
             throw new NullPointerException("can't upload a null file");
         }
-
-        URL url = new URL(context.getString(R.string.config_api_url) + issueId + "/attachments");
+        if(contex.getString(R.string.config_api_url_upload == "") {
+            URL url = new URL(context.getString(R.string.config_api_url) + issueId + "/attachments");
+        } else {
+            URL url = new URL(context.getString(R.string.config_api_url_upload) 
+                      + issueId + "/attachments");
+        }
         HttpURLConnection urlConnection = null;
         urlConnection = (HttpURLConnection) url.openConnection();
 
