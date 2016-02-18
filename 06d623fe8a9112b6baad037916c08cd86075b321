@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ffb9cba7_b33651b4",
+        "filename": "src/org/cyanogenmod/bugreport/CMLogService.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2016-02-18T01:29:51Z",
+      "side": 1,
+      "message": "test",
+      "range": {
+        "startLine": 103,
+        "startChar": 0,
+        "endLine": 103,
+        "endChar": 16
+      },
+      "revId": "06d623fe8a9112b6baad037916c08cd86075b321",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
