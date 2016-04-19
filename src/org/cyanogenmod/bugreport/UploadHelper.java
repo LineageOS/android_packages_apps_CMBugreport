@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -19,6 +20,9 @@ import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
+import java.util.zip.ZipOutputStream;
 
 public class UploadHelper {
 
@@ -31,7 +35,10 @@ public class UploadHelper {
 
     public static String uploadAndGetId(Context context, JSONObject input)
             throws IOException, JSONException {
-        URL url = new URL(context.getString(R.string.config_api_url));
+        final String urlStr = context.getString(R.string.config_api_url);
+        Log.d(TAG,
+                "uploadAndGetId() called with: " + "context = [" + context + "], input = [" + input + "] url: " + urlStr);
+        URL url = new URL(urlStr);
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             urlConnection.setRequestProperty("Accept", "application/json");
@@ -54,14 +61,25 @@ public class UploadHelper {
             os.close();
             urlConnection.connect();
 
-            String response = getResponse(urlConnection);
-            Log.v(TAG, response);
+            try {
+                String response = getResponse(urlConnection);
+                Log.v(TAG, response);
 
-            JSONObject output = new JSONObject(response);
-            return output.getString("key");
+                JSONObject output = new JSONObject(response);
+                return output.getString("key");
+            } catch (Exception e) {
+                Log.e(TAG, "error getting response", e);
+
+                try {
+                    Log.w(TAG, "error: " + getError(urlConnection));
+                } catch (Exception e1) {
+
+                }
+            }
         } finally {
             urlConnection.disconnect();
         }
+        return null;
     }
 
     public static boolean attachFile(Context context, File f, String issueId) throws IOException {
@@ -182,5 +200,58 @@ public class UploadHelper {
         responseStream.close();
 
         return stringBuilder.toString();
+    }
+
+    private static String getError(HttpURLConnection httpUrlConnection) throws IOException {
+        InputStream responseStream = new BufferedInputStream(httpUrlConnection.getErrorStream());
+
+        BufferedReader responseStreamReader = new BufferedReader(
+                new InputStreamReader(responseStream));
+        String line = "";
+        StringBuilder stringBuilder = new StringBuilder();
+        while ((line = responseStreamReader.readLine()) != null) {
+            stringBuilder.append(line).append("\n");
+        }
+        responseStreamReader.close();
+        responseStream.close();
+
+        return stringBuilder.toString();
+    }
+
+    static File zipFiles(Context context, File... files) throws ZipException {
+        ZipOutputStream zos = null;
+        File zippedFile = new File(context.getCacheDir(), files[0].getName() + ".zip");
+        try {
+            byte[] buffer = new byte[1024];
+            FileOutputStream fos = new FileOutputStream(zippedFile);
+            zos = new ZipOutputStream(fos);
+
+            for (int i = 0; i < files.length; i++) {
+                FileInputStream fis = new FileInputStream(files[i]);
+                try {
+                    zos.putNextEntry(new ZipEntry(files[i].getName()));
+                    int length;
+                    while ((length = fis.read(buffer)) != -1) {
+                        zos.write(buffer, 0, length);
+                    }
+                    zos.closeEntry();
+                } finally {
+                    try {
+                        fis.close();
+                    } catch (IOException e) {
+                    }
+                }
+            }
+        } catch (IOException e) {
+            Log.e(TAG, "Could not zip bug report", e);
+            throw new ZipException();
+        } finally {
+            if (zos != null)
+                try {
+                    zos.close();
+                } catch (IOException e) {
+                }
+        }
+        return zippedFile;
     }
 }
