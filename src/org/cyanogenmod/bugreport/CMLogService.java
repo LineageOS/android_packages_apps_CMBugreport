@@ -42,7 +42,6 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipInputStream;
-import java.util.zip.ZipOutputStream;
 
 public class CMLogService extends IntentService {
     private static final String TAG = "CMLogService";
@@ -124,13 +123,15 @@ public class CMLogService extends IntentService {
 
         PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
         mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TAG);
-        mWakeLock.acquire(3000);
+        mWakeLock.acquire();
 
-        notifyOfUpload();
-        doUpload(reportUri, sshotUri, inputJSON);
-
-        if (mWakeLock.isHeld()) {
-            mWakeLock.release();
+        try {
+            notifyOfUpload();
+            doUpload(reportUri, sshotUri, inputJSON);
+        } finally {
+            if (mWakeLock.isHeld()) {
+                mWakeLock.release();
+            }
         }
     }
 
@@ -273,6 +274,11 @@ public class CMLogService extends IntentService {
     }
 
 
+    /**
+     * Takes in a bug report, scrubs it of any identifying data, and then zips it up, along with
+     * the screenshot.
+     * @throws IOException
+     */
     private void attachFile(Uri reportUri, String bugId, Uri sshotUri)
             throws IOException {
 
@@ -287,48 +293,11 @@ public class CMLogService extends IntentService {
         File zippedReportFile;
         if (sshotUri != null) {
             File sshotFile = new File("/data" + sshotUri.getPath());
-            zippedReportFile = zipFiles(scrubbedBugReportFile, sshotFile);
+            zippedReportFile = UploadHelper.zipFiles(this, scrubbedBugReportFile, sshotFile);
         } else {
-            zippedReportFile = zipFiles(scrubbedBugReportFile);
+            zippedReportFile = UploadHelper.zipFiles(this, scrubbedBugReportFile);
         }
         UploadHelper.attachFile(this, zippedReportFile, bugId);
-    }
-
-    private File zipFiles(File... files) throws ZipException {
-        ZipOutputStream zos = null;
-        File zippedFile = new File(getCacheDir(), files[0].getName() + ".zip");
-        try {
-            byte[] buffer = new byte[1024];
-            FileOutputStream fos = new FileOutputStream(zippedFile);
-            zos = new ZipOutputStream(fos);
-
-            for (int i = 0; i < files.length; i++) {
-                FileInputStream fis = new FileInputStream(files[i]);
-                try {
-                    zos.putNextEntry(new ZipEntry(files[i].getName()));
-                    int length;
-                    while ((length = fis.read(buffer)) != -1) {
-                        zos.write(buffer, 0, length);
-                    }
-                    zos.closeEntry();
-                } finally {
-                    try {
-                        fis.close();
-                    } catch (IOException e) {
-                    }
-                }
-            }
-        } catch (IOException e) {
-            Log.e(TAG, "Could not zip bug report", e);
-            throw new ZipException();
-        } finally {
-            if (zos != null)
-                try {
-                    zos.close();
-                } catch (IOException e) {
-                }
-        }
-        return zippedFile;
     }
 
     private Uri zipUri(Uri zipUri) {
