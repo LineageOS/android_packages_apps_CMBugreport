@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_620d6f36",
+        "filename": "src/org/cyanogenmod/bugreport/UploadHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-20T10:02:53Z",
+      "side": 1,
+      "message": "Flowding logcat with a http response isn\u0027t a good behaviour to me. Surround with DEBUG constant.",
+      "range": {
+        "startLine": 65,
+        "startChar": 19,
+        "endLine": 65,
+        "endChar": 20
+      },
+      "revId": "052250bb589a591307ba3698e5e64c7cd93198bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_42087327",
+        "filename": "src/org/cyanogenmod/bugreport/UploadHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-20T10:02:53Z",
+      "side": 1,
+      "message": "getError only launches IOException. You shouldn\u0027t capture a generic exception",
+      "range": {
+        "startLine": 74,
+        "startChar": 25,
+        "endLine": 74,
+        "endChar": 34
+      },
+      "revId": "052250bb589a591307ba3698e5e64c7cd93198bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5faad753_02127b59",
+        "filename": "src/org/cyanogenmod/bugreport/UploadHelper.java",
+        "patchSetId": 4
+      },
+      "lineNbr": 216,
+      "author": {
+        "id": 3134
+      },
+      "writtenOn": "2016-04-20T10:02:53Z",
+      "side": 1,
+      "message": "free resources with finally",
+      "range": {
+        "startLine": 216,
+        "startChar": 8,
+        "endLine": 216,
+        "endChar": 22
+      },
+      "revId": "052250bb589a591307ba3698e5e64c7cd93198bf",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
