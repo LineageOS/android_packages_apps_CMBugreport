@@ -155,8 +155,13 @@ public class CMLogService extends IntentService {
 
         // first scrub
         try {
-            scrubbedFile = getFileStreamPath(SCRUBBED_BUG_REPORT_PREFIX + bugreportFile.getName());
-            ScrubberUtils.scrubFile(CMLogService.this, bugreportFile, scrubbedFile);
+            if (getResources().getBoolean(R.bool.config_bypass_scrub)) {
+                scrubbedFile = bugreportFile;
+            } else {
+                scrubbedFile = getFileStreamPath(SCRUBBED_BUG_REPORT_PREFIX
+                        + bugreportFile.getName());
+                ScrubberUtils.scrubFile(CMLogService.this, bugreportFile, scrubbedFile);
+            }
 
             // zip it back up, maybe with a screenshot
             if (sshotUri != null) {
