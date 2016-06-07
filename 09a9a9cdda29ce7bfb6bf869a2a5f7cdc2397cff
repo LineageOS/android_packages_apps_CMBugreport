@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5faad753_d7f01e00",
+        "filename": "src/org/cyanogenmod/bugreport/ScrubberUtils.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 848
+      },
+      "writtenOn": "2016-06-07T20:50:36Z",
+      "side": 1,
+      "message": "leave the.db?",
+      "range": {
+        "startLine": 45,
+        "startChar": 102,
+        "endLine": 45,
+        "endChar": 105
+      },
+      "revId": "09a9a9cdda29ce7bfb6bf869a2a5f7cdc2397cff",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
