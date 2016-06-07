@@ -42,6 +42,7 @@ public class ScrubberUtils {
     private static final Pattern IPADDRESS_PATTERN = Pattern.compile("^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])$");
     private static final Pattern PHONE_INFO_PATTERN = Pattern.compile("(msisdn=|mMsisdn=|iccid=|iccid: |mImsi=)[a-zA-Z0-9]*", Pattern.CASE_INSENSITIVE);
     private static final Pattern USER_INFO_PATTERN = Pattern.compile("(UserInfo\\{\\d:)[a-zA-Z0-9\\s]*", Pattern.CASE_INSENSITIVE);
+    private static final Pattern GOOGLE_DB_PATTERN = Pattern.compile("_[A-Za-z0-9!#$%&+_-.]+_gmail.com.db", Pattern.CASE_INSENSITIVE);
     private static final Pattern ACCOUNT_INFO_PATTERN = Pattern.compile("(Account \\{name=)[a-zA-Z0-9]*", Pattern.CASE_INSENSITIVE);
 
     public static final String IGNORE_DATA_RESOURCE_CACHE = "/data/resource-cache";
@@ -60,6 +61,7 @@ public class ScrubberUtils {
         line = PHONE_NUMBER_PATTERN.matcher(line).replaceAll("<phone number omitted>");
         line = WEB_URL_PATTERN.matcher(line).replaceAll("<web url omitted>");
         line = PHONE_INFO_PATTERN.matcher(line).replaceAll("<omitted>");
+        line = GOOGLE_DB_PATTERN.matcher(line).replaceAll("<omitted>");
         line = USER_INFO_PATTERN.matcher(line).replaceAll("<omitted>");
         line = ACCOUNT_INFO_PATTERN.matcher(line).replaceAll("<omitted>");
 
