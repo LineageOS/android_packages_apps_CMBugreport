@@ -32,7 +32,7 @@ public class PackageChangeReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        int newState = PackageManager.COMPONENT_ENABLED_STATE_DEFAULT;
+        int newState = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
         if (isPackageInstalled(context, XPOSED_INSTALLER_PACKAGE)) {
             // disable bug reporting
             newState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER;
