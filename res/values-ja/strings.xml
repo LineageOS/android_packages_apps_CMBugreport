@@ -24,8 +24,8 @@
   <string name="action_submit">送信</string>
   <!-- Notification messages -->
   <string name="notif_title">バグレポート</string>
-  <string name="notif_processing">バグレポートを処理中\u2026</string>
-  <string name="notif_uploading">イシューを作成してレポートをアップロード中\u2026</string>
+  <string name="notif_processing">バグレポートを処理中...</string>
+  <string name="notif_uploading">イシューを作成してレポートをアップロード中...</string>
   <string name="notif_thanks">送信ありがとうございました</string>
   <!-- Error messages -->
   <string name="error_no_text">このフィールドは空にできません</string>
