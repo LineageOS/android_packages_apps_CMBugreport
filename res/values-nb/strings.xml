@@ -19,7 +19,7 @@
   <string name="app_name">CM feilrapport</string>
   <!-- Main application -->
   <string name="summary">Angi et sammendrag for denne rapporten</string>
-  <string name="description">Angi en beskrivelse, hva du gjorde, programmer som kjører, osv.</string>
+  <string name="description">Angi en beskrivelse, hva du gjorde, apper som kjører, osv.</string>
   <string name="screenshot">Knytte skjermbilde tatt med bugreport?</string>
   <string name="action_submit">Send inn</string>
   <!-- Notification messages -->
