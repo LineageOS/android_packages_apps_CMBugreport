@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">CMバグレポート</string>
+  <string name="app_name">LineageOS バグレポート</string>
   <!-- Main application -->
   <string name="summary">このレポートの概要を入力してください</string>
   <string name="description">何をしていたか、どのアプリを実行していたかなどの説明を入力してください</string>

@@ -18,7 +18,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">CM-Fehlerbericht</string>
   <!-- Main application -->
-  <string name="summary">Geben Sie hier eine Zusammenfassung dieses Fehlerberichtes ein.</string>
+  <string name="summary">Geben Sie hier eine Zusammenfassung dieses Fehlerberichtes ein</string>
   <string name="description">Geben Sie hier eine Beschreibung des Fehlers ein: was Sie zuvor getan haben, welche Apps Sie verwendet haben usw.</string>
   <string name="screenshot">Soll das mit dem Fehlerbericht erstellte Bildschirmfoto angehängt werden?</string>
   <string name="action_submit">Absenden</string>
