@@ -31,7 +31,7 @@
   <string name="error_no_text">Dette feltet kan ikke være tomt</string>
   <string name="error_upload_failed">Opplastingen mislyktes: <xliff:g id="reason">%1$s</xliff:g></string>
   <string name="error_problem_creating">Problem med å opprette feilrapport</string>
-  <string name="error_connection_problem">Det er et problem med å koble til serveren. Trykk for å prøve på nytt.</string>
+  <string name="error_connection_problem">Problem ved tilkobling til tjeneren. Trykk for å prøve på nytt.</string>
   <string name="action_retry">Prøv på nytt</string>
   <string name="action_delete">Avbryt</string>
   <string name="error_bad_response">Ugyldig svar fra server</string>
