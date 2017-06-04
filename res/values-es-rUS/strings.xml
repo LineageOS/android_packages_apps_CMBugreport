@@ -42,7 +42,7 @@
   <string name="title_subject">Asunto del envío</string>
   <string name="title_crash_log">Contenido del envío</string>
   <string name="already_submitted">Este informe de error ya ha sido enviado. ¡Gracias!</string>
-  <string name="network_unavailable">No hay conexión de red disponible</string>
+  <string name="network_unavailable">Sin conexión de red disponible</string>
   <!-- Hidden copy paste feature -->
   <string name="crash_clipboard_toast_message_success">Informe de errores copiado al portapapeles.</string>
   <string name="crash_clipboard_toast_message_failure">No se pudo copiar el informe de errores al portapapeles.</string>
