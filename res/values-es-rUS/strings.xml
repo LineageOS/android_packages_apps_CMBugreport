@@ -18,8 +18,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Informe de error CM</string>
   <!-- Main application -->
-  <string name="summary">Escribe un resumen para este informe</string>
-  <string name="description">Escribe una descripción de lo que estabas haciendo, las aplicaciones en ejecución, etc.</string>
+  <string name="summary">Ingresa un resumen para este informe</string>
+  <string name="description">Ingresa una descripción de lo que estabas haciendo, las aplicaciones en ejecución, etc.</string>
   <string name="screenshot">¿Adjuntar captura de pantalla al informe de error?</string>
   <string name="action_submit">Enviar</string>
   <!-- Notification messages -->
