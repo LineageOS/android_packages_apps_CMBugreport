@@ -20,7 +20,7 @@
   <!-- Main application -->
   <string name="summary">Txostenaren deskripzio labur bat idatzi</string>
   <string name="description">Egiten ari zinena, martxan zenituen aplikazioen eta abarren deskripzioa idatzi.</string>
-  <string name="screenshot">Errore-txostenari pantailaren argazkia erantsi?</string>
+  <string name="screenshot">Errore-txostenari pantaila-argazkia erantsi?</string>
   <string name="action_submit">Bidali</string>
   <!-- Notification messages -->
   <string name="notif_title">Errore-txostena</string>
