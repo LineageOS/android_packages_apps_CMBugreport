@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Hlásenie chýb CM</string>
-  <!-- Main application -->
-  <string name="summary">Zadajte súhrn tohto hlásenia</string>
-  <string name="description">Zadajte popis, čo ste robili, spustené aplikácie, atď.</string>
-  <string name="screenshot">Pripojiť k hláseniu o zlyhaní snímku obrazovky?</string>
-  <string name="action_submit">Poslať</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Nahlásiť chybu</string>
-  <string name="notif_processing">Spracovávanie hlásenia chyby\u2026</string>
-  <string name="notif_uploading">Vytváranie problému a nahrávanie správy\u2026</string>
-  <string name="notif_thanks">Ďakujeme vám za podanie</string>
-  <!-- Error messages -->
-  <string name="error_no_text">Toto pole nesmie byť prázdne</string>
-  <string name="error_upload_failed">Nahrávanie zlyhalo: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Chyba pri vytváraní problému</string>
-  <string name="error_connection_problem">Problém s pripojením k serveru. Stlačte pre zopakovanie.</string>
-  <string name="action_retry">Skúsiť znovu</string>
-  <string name="action_delete">Zrušiť</string>
-  <string name="error_bad_response">Chybná odpoveď zo servera</string>
-  <string name="error_file_fail">Súbor sa nepodarilo nahrať</string>
-  <string name="error_zip_fail">Súbor sa nepodarilo skomprimovať</string>
-  <string name="submit_crash_report">Náhľad správy o zlyhaní</string>
-  <string name="submit">Poslať</string>
-  <string name="title_subject">Predmet podania</string>
-  <string name="title_crash_log">Obsah podania</string>
-  <string name="already_submitted">Toto hlásenie o chybe už bolo odoslané, ďakujeme!</string>
-  <string name="network_unavailable">K dispozícii nie je žiadne pripojenie k sieti</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Hlásenie o zlyhaní bolo skopírované do schránky.</string>
-  <string name="crash_clipboard_toast_message_failure">Nepodarilo sa skopírovať hlásenie o zlyhaní do schránky.</string>
-  <string name="crash_clipboard_label">Hlásenie o zlyhaní</string>
+    <string name="app_name">Hlásenie chýb CM</string>
+    <string name="summary">Zadajte súhrn tohto hlásenia</string>
+    <string name="description">Zadajte popis, čo ste robili, spustené aplikácie, atď.</string>
+    <string name="screenshot">Pripojiť k hláseniu o zlyhaní snímku obrazovky?</string>
+    <string name="action_submit">Poslať</string>
+    <string name="notif_title">Nahlásiť chybu</string>
+    <string name="notif_processing">Spracovávanie hlásenia chyby\u2026</string>
+    <string name="notif_uploading">Vytváranie problému a nahrávanie správy\u2026</string>
+    <string name="notif_thanks">Ďakujeme vám za podanie</string>
+    <string name="error_no_text">Toto pole nesmie byť prázdne</string>
+    <string name="error_upload_failed">Nahrávanie zlyhalo: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Chyba pri vytváraní problému</string>
+    <string name="error_connection_problem">Problém s pripojením k serveru. Stlačte pre zopakovanie.</string>
+    <string name="action_retry">Skúsiť znovu</string>
+    <string name="action_delete">Zrušiť</string>
+    <string name="error_bad_response">Chybná odpoveď zo servera</string>
+    <string name="error_file_fail">Súbor sa nepodarilo nahrať</string>
+    <string name="error_zip_fail">Súbor sa nepodarilo skomprimovať</string>
+    <string name="submit_crash_report">Náhľad správy o zlyhaní</string>
+    <string name="submit">Poslať</string>
+    <string name="title_subject">Predmet podania</string>
+    <string name="title_crash_log">Obsah podania</string>
+    <string name="already_submitted">Toto hlásenie o chybe už bolo odoslané, ďakujeme!</string>
+    <string name="network_unavailable">K dispozícii nie je žiadne pripojenie k sieti</string>
+    <string name="crash_clipboard_toast_message_success">Hlásenie o zlyhaní bolo skopírované do schránky.</string>
+    <string name="crash_clipboard_toast_message_failure">Nepodarilo sa skopírovať hlásenie o zlyhaní do schránky.</string>
+    <string name="crash_clipboard_label">Hlásenie o zlyhaní</string>
 </resources>

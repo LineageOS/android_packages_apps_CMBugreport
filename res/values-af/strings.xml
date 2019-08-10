@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">CM Fout verslag</string>
-  <!-- Main application -->
-  <string name="summary">Tik \'n opsomming vir hierdie verslag</string>
-  <string name="description">Tik \'n beskrywing, waarmee was jy besig, programme wat aktief was, ens.</string>
-  <string name="screenshot">Heg skerm foto vasgevang aan met fout verslag?</string>
-  <string name="action_submit">Stuur</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Fout verslag</string>
-  <string name="notif_processing">Verwerking van fout verslag\u2026</string>
-  <string name="notif_uploading">Log fout en laai verslag op\u2026</string>
-  <string name="notif_thanks">Dankie vir jou voorlegging</string>
-  <!-- Error messages -->
-  <string name="error_no_text">Hierdie veld kan nie leeg wees nie</string>
-  <string name="error_upload_failed">Oplaai het gefaal: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Probleem om fout te skep</string>
-  <string name="error_connection_problem">Kan nie koppel aan bediener nie. Tik om weer te probeer.</string>
-  <string name="action_retry">Probeer weer</string>
-  <string name="action_delete">Kanselleer</string>
-  <string name="error_bad_response">Verkeerde terugvoer van bediener</string>
-  <string name="error_file_fail">Kon nie die lêer oplaai nie</string>
-  <string name="error_zip_fail">Die lêer kon nie saamgepers word nie</string>
-  <string name="submit_crash_report">Voorskou die fout verslag</string>
-  <string name="submit">Stuur</string>
-  <string name="title_subject">Voorlegging se onderwerp</string>
-  <string name="title_crash_log">Inhoud voorlegging</string>
-  <string name="already_submitted">Hierdie fout verslag is alreeds ingedien, dankie!</string>
-  <string name="network_unavailable">Geen netwerk verbinding beskikbaar</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Fout verslag gekopieer na knipbord.</string>
-  <string name="crash_clipboard_toast_message_failure">Kon nie die fout verslag kopieer na die knipbord.</string>
-  <string name="crash_clipboard_label">Fout verslag</string>
+    <string name="app_name">CM Fout verslag</string>
+    <string name="summary">Tik \'n opsomming vir hierdie verslag</string>
+    <string name="description">Tik \'n beskrywing, waarmee was jy besig, programme wat aktief was, ens.</string>
+    <string name="screenshot">Heg skerm foto vasgevang aan met fout verslag?</string>
+    <string name="action_submit">Stuur</string>
+    <string name="notif_title">Fout verslag</string>
+    <string name="notif_processing">Verwerking van fout verslag\u2026</string>
+    <string name="notif_uploading">Log fout en laai verslag op\u2026</string>
+    <string name="notif_thanks">Dankie vir jou voorlegging</string>
+    <string name="error_no_text">Hierdie veld kan nie leeg wees nie</string>
+    <string name="error_upload_failed">Oplaai het gefaal: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Probleem om fout te skep</string>
+    <string name="error_connection_problem">Kan nie koppel aan bediener nie. Tik om weer te probeer.</string>
+    <string name="action_retry">Probeer weer</string>
+    <string name="action_delete">Kanselleer</string>
+    <string name="error_bad_response">Verkeerde terugvoer van bediener</string>
+    <string name="error_file_fail">Kon nie die lêer oplaai nie</string>
+    <string name="error_zip_fail">Die lêer kon nie saamgepers word nie</string>
+    <string name="submit_crash_report">Voorskou die fout verslag</string>
+    <string name="submit">Stuur</string>
+    <string name="title_subject">Voorlegging se onderwerp</string>
+    <string name="title_crash_log">Inhoud voorlegging</string>
+    <string name="already_submitted">Hierdie fout verslag is alreeds ingedien, dankie!</string>
+    <string name="network_unavailable">Geen netwerk verbinding beskikbaar</string>
+    <string name="crash_clipboard_toast_message_success">Fout verslag gekopieer na knipbord.</string>
+    <string name="crash_clipboard_toast_message_failure">Kon nie die fout verslag kopieer na die knipbord.</string>
+    <string name="crash_clipboard_label">Fout verslag</string>
 </resources>

@@ -16,8 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Main application -->
-  <!-- Notification messages -->
-  <!-- Error messages -->
-  <!-- Hidden copy paste feature -->
+    <string name="app_name">Adroddiad Gwall LineageOS</string>
+    <string name="summary">Rho grynodeb o\'r adroddiad hwn</string>
+    <string name="description">Rho ddisgrifiad, beth roeddet yn ei wneud, pa apiau oedd yn rhedeg, ayyb.</string>
+    <string name="screenshot">Atodi\'r sgrinlun a gipiwyd gyda\'r adroddiad gwall?</string>
+    <string name="action_submit">Cyflwyno</string>
+    <string name="notif_title">Adroddiad Gwall</string>
+    <string name="notif_processing">Yn prosesu adroddiad gwall\u2026</string>
+    <string name="notif_uploading">Yn creu mater ac yn uwchlwytho\u2019r adroddiad</string>
+    <string name="notif_thanks">Diolch am gyflwyno dy adroddiad</string>
+    <string name="error_no_text">Rhaid rhoi rhywbeth yn y maes hwn</string>
+    <string name="error_upload_failed">Methodd yr uwchlwytho: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Problem yn creu\'r mater</string>
+    <string name="error_connection_problem">Problem yn cysylltu â\'r gweinydd. Tapia i geisio eto.</string>
+    <string name="action_retry">Ailgeisio</string>
+    <string name="action_delete">Diddymu</string>
+    <string name="error_bad_response">Ymateb drwg gan y gweinydd</string>
+    <string name="error_file_fail">Methodd y ffeil ag uwchlwytho</string>
+    <string name="error_zip_fail">Methodd y ffeil â chywasgu</string>
+    <string name="submit_crash_report">Rhagweld Adroddiad Chwalu</string>
+    <string name="submit">Cyflwyno</string>
+    <string name="title_subject">Pwnc yr adroddiad</string>
+    <string name="title_crash_log">Cynnwys yr adroddiad</string>
+    <string name="already_submitted">Mae\'r adroddiad gwall hwn eisoes wedi ei gyflwyno. Diolch!</string>
+    <string name="network_unavailable">Dim cysylltiad rhwydwaith ar gael</string>
+    <string name="crash_clipboard_toast_message_success">Copïwyd yr adroddiad chwalu i\'r clipfwrdd.</string>
+    <string name="crash_clipboard_toast_message_failure">Methwyd a chopïo’r adroddiad chwalu i\'r clipfwrdd.</string>
+    <string name="crash_clipboard_label">Adroddiad Chwalu</string>
 </resources>

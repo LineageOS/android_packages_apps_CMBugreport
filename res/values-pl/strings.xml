@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Zgłaszanie błędów CM</string>
-  <!-- Main application -->
-  <string name="summary">Wprowadź opis zgłoszenia</string>
-  <string name="description">Opisz wykonywane czynności, uruchamiane aplikacje itp.</string>
-  <string name="screenshot">Dołączyć zrobiony zrzut ekranu z raportem?</string>
-  <string name="action_submit">Wyślij</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Zgłaszanie błędów</string>
-  <string name="notif_processing">Wysyłanie raportu\u2026</string>
-  <string name="notif_uploading">Tworzenie zgłoszenia i wysyłanie raportu\u2026</string>
-  <string name="notif_thanks">Dziękujemy za zgłoszenie błędu</string>
-  <!-- Error messages -->
-  <string name="error_no_text">To pole nie może być puste</string>
-  <string name="error_upload_failed">Wysyłanie nie powiodło się: <xliff:g id="powód">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Problem z utworzeniem zgłoszenia</string>
-  <string name="error_connection_problem">Błąd podczas łączenia z serwerem. Dotknij, aby ponowić próbę.</string>
-  <string name="action_retry">Ponów</string>
-  <string name="action_delete">Anuluj</string>
-  <string name="error_bad_response">Negatywna odpowiedź serwera</string>
-  <string name="error_file_fail">Nie udało się wysłać pliku</string>
-  <string name="error_zip_fail">Nie udało się skompresować pliku</string>
-  <string name="submit_crash_report">Podgląd zgłoszenia</string>
-  <string name="submit">Wyślij</string>
-  <string name="title_subject">Temat zgłoszenia</string>
-  <string name="title_crash_log">Treść zgłoszenia</string>
-  <string name="already_submitted">To zgłoszenie zostało już złożone, dziękuję!</string>
-  <string name="network_unavailable">Brak połączenia sieciowego</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Raport problemu skopiowany do schowka.</string>
-  <string name="crash_clipboard_toast_message_failure">Nie udało się skopiować raportu błędu do schowka.</string>
-  <string name="crash_clipboard_label">Raport problemu</string>
+    <string name="app_name">Zgłaszanie błędów CM</string>
+    <string name="summary">Wprowadź opis zgłoszenia</string>
+    <string name="description">Opisz wykonywane czynności, uruchamiane aplikacje itp.</string>
+    <string name="screenshot">Dołączyć zrobiony zrzut ekranu z raportem?</string>
+    <string name="action_submit">Wyślij</string>
+    <string name="notif_title">Zgłaszanie błędów</string>
+    <string name="notif_processing">Wysyłanie raportu\u2026</string>
+    <string name="notif_uploading">Tworzenie zgłoszenia i wysyłanie raportu\u2026</string>
+    <string name="notif_thanks">Dziękujemy za zgłoszenie błędu</string>
+    <string name="error_no_text">To pole nie może być puste</string>
+    <string name="error_upload_failed">Wysyłanie nie powiodło się: <xliff:g id="powód">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Problem z utworzeniem zgłoszenia</string>
+    <string name="error_connection_problem">Błąd podczas łączenia z serwerem. Dotknij, aby ponowić próbę.</string>
+    <string name="action_retry">Ponów</string>
+    <string name="action_delete">Anuluj</string>
+    <string name="error_bad_response">Negatywna odpowiedź serwera</string>
+    <string name="error_file_fail">Nie udało się wysłać pliku</string>
+    <string name="error_zip_fail">Nie udało się skompresować pliku</string>
+    <string name="submit_crash_report">Podgląd zgłoszenia</string>
+    <string name="submit">Wyślij</string>
+    <string name="title_subject">Temat zgłoszenia</string>
+    <string name="title_crash_log">Treść zgłoszenia</string>
+    <string name="already_submitted">To zgłoszenie zostało już złożone, dziękuję!</string>
+    <string name="network_unavailable">Brak połączenia sieciowego</string>
+    <string name="crash_clipboard_toast_message_success">Raport problemu skopiowany do schowka.</string>
+    <string name="crash_clipboard_toast_message_failure">Nie udało się skopiować raportu błędu do schowka.</string>
+    <string name="crash_clipboard_label">Raport problemu</string>
 </resources>

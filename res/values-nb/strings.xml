@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">CM feilrapport</string>
-  <!-- Main application -->
-  <string name="summary">Angi et sammendrag for denne rapporten</string>
-  <string name="description">Angi en beskrivelse, hva du gjorde, apper som kjører, osv.</string>
-  <string name="screenshot">Knytte skjermbilde tatt med bugreport?</string>
-  <string name="action_submit">Send inn</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Feilrapport</string>
-  <string name="notif_processing">Behandler feilrapport\u2026</string>
-  <string name="notif_uploading">Oppretter problemrapport og laster opp/u2026</string>
-  <string name="notif_thanks">Takk for bidraget</string>
-  <!-- Error messages -->
-  <string name="error_no_text">Dette feltet kan ikke være tomt</string>
-  <string name="error_upload_failed">Opplastingen mislyktes: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Problem med å opprette feilrapport</string>
-  <string name="error_connection_problem">Problem ved tilkobling til tjeneren. Trykk for å prøve på nytt.</string>
-  <string name="action_retry">Prøv på nytt</string>
-  <string name="action_delete">Avbryt</string>
-  <string name="error_bad_response">Ugyldig svar fra server</string>
-  <string name="error_file_fail">Filen kunne ikke lastes opp</string>
-  <string name="error_zip_fail">Filen kan ikke komprimeres</string>
-  <string name="submit_crash_report">Forhåndsvisning av feilrapport</string>
-  <string name="submit">Send inn</string>
-  <string name="title_subject">Sender inn emne</string>
-  <string name="title_crash_log">Sender inn innhold</string>
-  <string name="already_submitted">Denne feilrapporten er allerede sendt, takk!</string>
-  <string name="network_unavailable">Ingen nettverkstilkobling tilgjengelig</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Krasjrapportering kopiert til utklippstavlen.</string>
-  <string name="crash_clipboard_toast_message_failure">Kan ikke kopiere feilrapporten til utklippstavlen.</string>
-  <string name="crash_clipboard_label">Feilrapport</string>
+    <string name="app_name">CM feilrapport</string>
+    <string name="summary">Angi et sammendrag for denne rapporten</string>
+    <string name="description">Angi en beskrivelse, hva du gjorde, apper som kjører, osv.</string>
+    <string name="screenshot">Knytte skjermbilde tatt med bugreport?</string>
+    <string name="action_submit">Send inn</string>
+    <string name="notif_title">Feilrapport</string>
+    <string name="notif_processing">Behandler feilrapport\u2026</string>
+    <string name="notif_uploading">Oppretter problemrapport og laster opp/u2026</string>
+    <string name="notif_thanks">Takk for bidraget</string>
+    <string name="error_no_text">Dette feltet kan ikke være tomt</string>
+    <string name="error_upload_failed">Opplastingen mislyktes: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Problem med å opprette feilrapport</string>
+    <string name="error_connection_problem">Problem ved tilkobling til tjeneren. Trykk for å prøve på nytt.</string>
+    <string name="action_retry">Prøv på nytt</string>
+    <string name="action_delete">Avbryt</string>
+    <string name="error_bad_response">Ugyldig svar fra server</string>
+    <string name="error_file_fail">Filen kunne ikke lastes opp</string>
+    <string name="error_zip_fail">Filen kan ikke komprimeres</string>
+    <string name="submit_crash_report">Forhåndsvisning av feilrapport</string>
+    <string name="submit">Send inn</string>
+    <string name="title_subject">Sender inn emne</string>
+    <string name="title_crash_log">Sender inn innhold</string>
+    <string name="already_submitted">Denne feilrapporten er allerede sendt, takk!</string>
+    <string name="network_unavailable">Ingen nettverkstilkobling tilgjengelig</string>
+    <string name="crash_clipboard_toast_message_success">Krasjrapportering kopiert til utklippstavlen.</string>
+    <string name="crash_clipboard_toast_message_failure">Kan ikke kopiere feilrapporten til utklippstavlen.</string>
+    <string name="crash_clipboard_label">Feilrapport</string>
 </resources>

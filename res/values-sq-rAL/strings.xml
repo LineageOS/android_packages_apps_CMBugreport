@@ -16,22 +16,18 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Raportimi i problemeve të CM</string>
-  <!-- Main application -->
-  <string name="summary">Shkruaj një përmbledhje për këtë raport</string>
-  <string name="description">Vendos një përshkrim si për shëmbull çfarë ishit duke bërë, çfarë aplikacionesh po punonin, etj.</string>
-  <string name="screenshot">Do që t\'i bashkangjitësh një pamje të ekranit këtij raporti të problemit?</string>
-  <string name="action_submit">Dërgo</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Raportimi i problemeve</string>
-  <string name="notif_processing">Duke proçesuar raportimin e problemit\u2026</string>
-  <string name="notif_thanks">Faleminderit për dërgesën tuaj</string>
-  <!-- Error messages -->
-  <string name="error_upload_failed">Ngarkimi dështoi: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="action_retry">Provo përsëri</string>
-  <string name="action_delete">Anullo</string>
-  <string name="submit">Dërgo</string>
-  <string name="already_submitted">Raportimi i këtij problemi tashmë është dërguar, faleminderit!</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_label">Raportimi i problemit</string>
+    <string name="app_name">Raportimi i problemeve të CM</string>
+    <string name="summary">Shkruaj një përmbledhje për këtë raport</string>
+    <string name="description">Vendos një përshkrim si për shëmbull çfarë ishit duke bërë, çfarë aplikacionesh po punonin, etj.</string>
+    <string name="screenshot">Do që t\'i bashkangjitësh një pamje të ekranit këtij raporti të problemit?</string>
+    <string name="action_submit">Dërgo</string>
+    <string name="notif_title">Raportimi i problemeve</string>
+    <string name="notif_processing">Duke proçesuar raportimin e problemit\u2026</string>
+    <string name="notif_thanks">Faleminderit për dërgesën tuaj</string>
+    <string name="error_upload_failed">Ngarkimi dështoi: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="action_retry">Provo përsëri</string>
+    <string name="action_delete">Anullo</string>
+    <string name="submit">Dërgo</string>
+    <string name="already_submitted">Raportimi i këtij problemi tashmë është dërguar, faleminderit!</string>
+    <string name="crash_clipboard_label">Raportimi i problemit</string>
 </resources>

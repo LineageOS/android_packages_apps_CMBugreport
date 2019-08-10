@@ -16,8 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Main application -->
-  <!-- Notification messages -->
-  <!-- Error messages -->
-  <!-- Hidden copy paste feature -->
+    <string name="app_name">CyanogenMod-flaterrapport</string>
+    <string name="summary">Gearfetting fan dit flaterrapport</string>
+    <string name="description">Jou in omskriuwing, wat jo diene, apps dy\'t útfierd waarden, ensfh.</string>
+    <string name="screenshot">Skermôfdruk makke troch flaterrapport meistjoere?</string>
+    <string name="action_submit">Yntsjinje</string>
+    <string name="notif_title">Flaterrapport</string>
+    <string name="notif_processing">Flaterrapport ferwurkje\u2026</string>
+    <string name="notif_uploading">Rapport meitsje en oplade\u2026</string>
+    <string name="notif_thanks">Tankt foar jo yntsjinning</string>
+    <string name="error_no_text">Dit fjild mei net leech wêze</string>
+    <string name="error_upload_failed">Oplaad mislearre: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Flater by meitsjen fan rapport</string>
+    <string name="error_connection_problem">Koe net ferbine mei de server. Tik om opnij te probearjen.</string>
+    <string name="action_retry">Opnij</string>
+    <string name="action_delete">Annulearje</string>
+    <string name="error_bad_response">Gjin reaksje fan de server</string>
+    <string name="error_file_fail">Bestân opladen mislearre</string>
+    <string name="error_zip_fail">Bestân komprimearje mislearre</string>
+    <string name="submit_crash_report">Foarbyld</string>
+    <string name="submit">Yntsjinje</string>
+    <string name="title_subject">Underwerp</string>
+    <string name="title_crash_log">Ynhâld</string>
+    <string name="already_submitted">Dizze flater is earder al yntsjinne, tank!</string>
+    <string name="network_unavailable">Gjin netwurkferbining beskikber</string>
+    <string name="crash_clipboard_toast_message_success">Flaterrapport nei klamboerd kopiearre.</string>
+    <string name="crash_clipboard_toast_message_failure">Flaterrapport nei klamboerd kopiearje mislearre.</string>
+    <string name="crash_clipboard_label">Flaterrapport</string>
 </resources>

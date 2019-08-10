@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">CM Hata Raporu</string>
-  <!-- Main application -->
-  <string name="summary">Bu rapor için bir özet yazın</string>
-  <string name="description">Ne yapıyordunuz, hangi uygulamalar çalışıyordu, vs. bir açıklama yazın.</string>
-  <string name="screenshot">Çekilen ekran resmi hata raporuna eklensin mi?</string>
-  <string name="action_submit">Gönder</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Hata raporu</string>
-  <string name="notif_processing">Hata raporu işleniyor\u2026</string>
-  <string name="notif_uploading">Sorun oluşturulup raporu yükleniyor\u2026</string>
-  <string name="notif_thanks">Gönderiniz için teşekkür ederiz</string>
-  <!-- Error messages -->
-  <string name="error_no_text">Bu alan boş olmamalıdır</string>
-  <string name="error_upload_failed">Yüklenemedi: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Sorun oluştururken hata</string>
-  <string name="error_connection_problem">Sunucuya bağlanırken sorun oluştu. Yeniden denemek için dokunun.</string>
-  <string name="action_retry">Tekrar dene</string>
-  <string name="action_delete">İptal</string>
-  <string name="error_bad_response">Sunucudan olumsuz yanıt</string>
-  <string name="error_file_fail">Dosya gönderilemedi</string>
-  <string name="error_zip_fail">Dosya sıkıştırılamadı</string>
-  <string name="submit_crash_report">Çökme Raporu Önizlemesi</string>
-  <string name="submit">Gönder</string>
-  <string name="title_subject">Gönderi konusu</string>
-  <string name="title_crash_log">Gönderi içeriği</string>
-  <string name="already_submitted">Bu hata raporu zaten gönderildi, teşekkür ederiz!</string>
-  <string name="network_unavailable">Ağ bağlantısı yok</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Hata raporu panoya kopyalandı.</string>
-  <string name="crash_clipboard_toast_message_failure">Hata raporu panoya kopyalanamadı.</string>
-  <string name="crash_clipboard_label">Hata Raporu</string>
+    <string name="app_name">CM Hata Raporu</string>
+    <string name="summary">Bu rapor için bir özet yazın</string>
+    <string name="description">Ne yapıyordunuz, hangi uygulamalar çalışıyordu, vs. bir açıklama yazın.</string>
+    <string name="screenshot">Çekilen ekran resmi hata raporuna eklensin mi?</string>
+    <string name="action_submit">Gönder</string>
+    <string name="notif_title">Hata raporu</string>
+    <string name="notif_processing">Hata raporu işleniyor\u2026</string>
+    <string name="notif_uploading">Sorun oluşturulup raporu yükleniyor\u2026</string>
+    <string name="notif_thanks">Gönderiniz için teşekkür ederiz</string>
+    <string name="error_no_text">Bu alan boş olmamalıdır</string>
+    <string name="error_upload_failed">Yüklenemedi: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Sorun oluştururken hata</string>
+    <string name="error_connection_problem">Sunucuya bağlanırken sorun oluştu. Yeniden denemek için dokunun.</string>
+    <string name="action_retry">Tekrar dene</string>
+    <string name="action_delete">İptal</string>
+    <string name="error_bad_response">Sunucudan olumsuz yanıt</string>
+    <string name="error_file_fail">Dosya gönderilemedi</string>
+    <string name="error_zip_fail">Dosya sıkıştırılamadı</string>
+    <string name="submit_crash_report">Çökme Raporu Önizlemesi</string>
+    <string name="submit">Gönder</string>
+    <string name="title_subject">Gönderi konusu</string>
+    <string name="title_crash_log">Gönderi içeriği</string>
+    <string name="already_submitted">Bu hata raporu zaten gönderildi, teşekkür ederiz!</string>
+    <string name="network_unavailable">Ağ bağlantısı yok</string>
+    <string name="crash_clipboard_toast_message_success">Hata raporu panoya kopyalandı.</string>
+    <string name="crash_clipboard_toast_message_failure">Hata raporu panoya kopyalanamadı.</string>
+    <string name="crash_clipboard_label">Hata Raporu</string>
 </resources>

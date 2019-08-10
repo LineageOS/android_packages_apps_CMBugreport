@@ -16,35 +16,31 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">CM fejlrapport</string>
-  <!-- Main application -->
-  <string name="summary">Angiv et resumé for denne rapport</string>
-  <string name="description">Angiv en beskrivelse, hvad gjorde du, kørende apps osv.</string>
-  <string name="screenshot">Vedhæft skærmbillede taget med fejlrapport?</string>
-  <string name="action_submit">Send</string>
-  <!-- Notification messages -->
-  <string name="notif_title">Fejlrapport</string>
-  <string name="notif_processing">Sender fejlrapport\u2026</string>
-  <string name="notif_uploading">Opretter spørgsmål og sender rapport\u2026</string>
-  <string name="notif_thanks">Tak for din rapport</string>
-  <!-- Error messages -->
-  <string name="error_no_text">Dette felt må ikke være tom</string>
-  <string name="error_upload_failed">Upload mislykkedes: <xliff:g id="reason">%1$s</xliff:g></string>
-  <string name="error_problem_creating">Problem med at oprette spørgsmålet</string>
-  <string name="error_connection_problem">Problemer med forbindelsen til serveren. Tryk for at prøve igen.</string>
-  <string name="action_retry">Prøv igen</string>
-  <string name="action_delete">Annullér</string>
-  <string name="error_bad_response">Ugyldigt svar fra serveren</string>
-  <string name="error_file_fail">Filen kunne ikke overføres</string>
-  <string name="error_zip_fail">Filen kunne ikke komprimeres</string>
-  <string name="submit_crash_report">Vis nedbrudsrapport</string>
-  <string name="submit">Send</string>
-  <string name="title_subject">Emne på indsendelse</string>
-  <string name="title_crash_log">Indhold af indsendelse</string>
-  <string name="already_submitted">Denne fejlrapport er allerede blevet indsendt, tak!</string>
-  <string name="network_unavailable">Ingen netværksforbindelse tilgængelig</string>
-  <!-- Hidden copy paste feature -->
-  <string name="crash_clipboard_toast_message_success">Fejlrapport kopieret til udklipsholder.</string>
-  <string name="crash_clipboard_toast_message_failure">Kunne ikke kopiere fejlrapporten til udklipsholder.</string>
-  <string name="crash_clipboard_label">Fejlrapport</string>
+    <string name="app_name">CM-Fejlrapport</string>
+    <string name="summary">Indtast et resumé til denne rapport</string>
+    <string name="description">Indtast en beskrivelse af, hvad du lavede, kørende apps, osv.</string>
+    <string name="screenshot">Vedhæft skærmbillede taget med fejlrapport?</string>
+    <string name="action_submit">Indsend</string>
+    <string name="notif_title">Fejlrapport</string>
+    <string name="notif_processing">Behandler fejlrapport\u2026</string>
+    <string name="notif_uploading">Opretter problematik og indsender rapport\u2026</string>
+    <string name="notif_thanks">Tak for din indsendelse</string>
+    <string name="error_no_text">Dette felt må ikke være tomt</string>
+    <string name="error_upload_failed">Indsendelse fejlede: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Problem ved oprettelse af problematikken</string>
+    <string name="error_connection_problem">Problem ved tilslutning til serveren. Tryk for at omgøre.</string>
+    <string name="action_retry">Omgør</string>
+    <string name="action_delete">Afbryd</string>
+    <string name="error_bad_response">Dårlig besvarelse fra server</string>
+    <string name="error_file_fail">Indsendelse af filen fejlede</string>
+    <string name="error_zip_fail">Komprimering af filen fejlede</string>
+    <string name="submit_crash_report">Forhåndsvis Nedbrudsrapport</string>
+    <string name="submit">Indsend</string>
+    <string name="title_subject">Indsendelsesemne</string>
+    <string name="title_crash_log">Indsendelsesindhold</string>
+    <string name="already_submitted">Denne fejlrapport er allerede blevet indsendt, tak!</string>
+    <string name="network_unavailable">Ingen netværksforbindelse tilgængelig</string>
+    <string name="crash_clipboard_toast_message_success">Nedbrudsrapport kopieret til udklipsholder.</string>
+    <string name="crash_clipboard_toast_message_failure">Kopiering af nedbrudsrapporten til udklipsholder fejlede.</string>
+    <string name="crash_clipboard_label">Nedbrudsrapport</string>
 </resources>
