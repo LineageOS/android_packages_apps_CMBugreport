@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2014 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Aithris buga CM</string>
+    <string name="summary">Cuir a-steach geàrr-chunntas airson na h-aithisg seo</string>
+    <string name="description">Cuir a-steach tuairisgeul, na bha thu ris, na h-aplacaidean a bha a’ ruith is msaa.</string>
+    <string name="screenshot">A bheil thu airson glacadh-sgrìn a chur ri aithisg a’ bhuga?</string>
+    <string name="action_submit">Cuir a-null</string>
+    <string name="notif_title">Aithris air buga</string>
+    <string name="notif_processing">A’ làimhseachadh aithris a’ bhuga\u2026</string>
+    <string name="notif_uploading">A’ cruthachadh aithisg duilgheadais is a’ luchdadh suas na h-aithisg\u2026</string>
+    <string name="notif_thanks">Mòran taing airson innse dhuinn</string>
+    <string name="error_no_text">Chan fhaod an raon seo a bhith falamh</string>
+    <string name="error_upload_failed">Dh’fhàillig a luchdadh suas: <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="error_problem_creating">Duilgheadas a’ cruthachadh aithisg an duilgheadais</string>
+    <string name="error_connection_problem">Duilgheadas a’ ceangal ris an fhrithealaiche. Thoir gnogag airson feuchainn ris a-rithist.</string>
+    <string name="action_retry">Feuch ris a-rithist</string>
+    <string name="action_delete">Sguir dheth</string>
+    <string name="error_bad_response">Droch-fhreagairt on fhrithealaiche</string>
+    <string name="error_file_fail">Dh’fhàillig luchdadh suas an fhaidhle</string>
+    <string name="error_zip_fail">Dh’fhàillig dùmhlachadh an fhaidhle</string>
+    <string name="submit_crash_report">Ro-sheall aithisg an tuislidh</string>
+    <string name="submit">Cuir a-null</string>
+    <string name="title_subject">Cuspair dhe na thèid a chur</string>
+    <string name="title_crash_log">Susbaint dhe na thèid a chur</string>
+    <string name="already_submitted">Chaidh an aithris mun bhuga seo a chur mu thràth, mòran taing!</string>
+    <string name="network_unavailable">Chan eil ceangal ris an lìonra</string>
+    <string name="crash_clipboard_toast_message_success">Chaidh lethbhreac dhen aithisg air an tuisleadh a chur air an stòr-bhòrd.</string>
+    <string name="crash_clipboard_toast_message_failure">Cha b’ urrainn dhuinn lethbhreac dhen aithisg air an tuisleadh a chur air an stòr-bhòrd.</string>
+    <string name="crash_clipboard_label">Aithisg an tuislidh</string>
+</resources>
